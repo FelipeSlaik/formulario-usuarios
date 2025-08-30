@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Cadastro de Usuário</h2>
+
+        <form id="cadastroForm">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade" placeholder="Digite sua idade" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <div class="lista-usuarios">
+            <h3>Usuários cadastrados:</h3>
+            <ul id="usuariosList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
