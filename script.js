@@ -15,28 +15,24 @@ form.addEventListener("submit", function (event) {
 
   let valido = true;
 
-  document.getElementById("erroNome").textContent = "";
-  document.getElementById("erroEmail").textContent = "";
-  document.getElementById("erroIdade").textContent = "";
+  var errNome = document.getElementById("erroNome");
+   var errEmail = document.getElementById("erroEmail");
+  var errIdade = document.getElementById("erroIdade");
 
   if (nome.trim() === "") {
-    document.getElementById("erroNome").textContent = "Digite o nome!";
+    errNome.textContent = "Digite seu nome!";
     valido = false;
   }
 
-  if (email.trim() === "") {
-    document.getElementById("erroEmail").textContent = "Digite o email!";
-    valido = false;
-  } else if (!email.includes("@")) {
-    document.getElementById("erroEmail").textContent = "Email inválido!";
-    valido = false;
+  if (email.trim() === "" || !email.includes("@")) {
+    errEmail.textContent = "Digite um email válido!";
+    valido = false
   }
-
+    
   const idadeNum = Number(idade);
 
   if (idade.trim() === "" || idadeNum <= 0 || idadeNum > 120) {
-    document.getElementById("erroIdade").textContent =
-      "Idade inválida!";
+    errIdade.textContent = "Idade inválida!";
     valido = false;
   }
 
