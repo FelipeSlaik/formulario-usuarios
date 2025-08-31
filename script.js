@@ -13,11 +13,6 @@ form.addEventListener("submit", function (event) {
   const email = document.getElementById("email").value;
   const idade = document.getElementById("idade").value;
 
-  const usuario = { nome, email, idade };
-  usuarios.push(usuario);
-
-  salvarUsuarios();
-
   let valido = true;
 
   document.getElementById("erroNome").textContent = "";
@@ -61,6 +56,11 @@ form.addEventListener("submit", function (event) {
   });
 
   li.appendChild(botaoRemover);
+
+  const usuario = { nome, email, idade };
+  usuarios.push(usuario);
+
+  salvarUsuarios();
 
   usuariosList.appendChild(li);
   form.reset();
