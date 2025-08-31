@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #121212;
+  background-image: url(https://i.pinimg.com/736x/a2/ec/5b/a2ec5b09c292ce70cb41be86d9e4f550.jpg);
   color: #fff;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .form-container {
-  background: #1e1e1e;
+   background-color: rgba(0, 0, 0, 0.8);
   padding: 2rem;
   border-radius: 1rem;
   width: 100%;
